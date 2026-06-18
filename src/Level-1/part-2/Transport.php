@@ -12,6 +12,10 @@ class Transport {
         $this->type = $type;
     }
 
+    public function getType(): TransportType {
+       return $this->type;
+    }
+
     public function sound(): string {
        
        if($this->type === TransportType::Car || $this->type === TransportType::Bike ) {
