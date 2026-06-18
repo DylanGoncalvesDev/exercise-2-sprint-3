@@ -11,5 +11,19 @@ class Person {
        $this->smartphone = $smartphone;
        $this->transport = $transport;
     }
+
+    public function leaveHouse() {
+      echo "Out of Home!..." . PHP_EOL;
+      echo "I have my Keys ?..." . PHP_EOL . $this->keys->ringTheKeys() . PHP_EOL;
+      echo "The Wallet ?..." . PHP_EOL . $this->wallet->ringTheWallet() . PHP_EOL;
+      echo "The Phone ?..." . PHP_EOL . $this->smartphone->ringThePhone() . PHP_EOL;
+      if ($this->transport->getType() === TransportType::Car) {
+          echo "The Car keys ?..." . PHP_EOL . $this->transport->sound() . PHP_EOL;
+      } elseif ($this->transport->getType() === TransportType::Bike) {
+                echo "The Bike keys ?..." . PHP_EOL . $this->transport->sound() . PHP_EOL;
+      } else {
+        echo "The Transit card ?..." . PHP_EOL . $this->transport->sound() . PHP_EOL;
+      }
+    }
     
 }
