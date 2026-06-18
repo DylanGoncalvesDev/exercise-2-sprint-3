@@ -11,4 +11,13 @@ class Transport {
     Public function __construct(TransportType $type) {
         $this->type = $type;
     }
+
+    public function sound(): string {
+       
+       if($this->type === TransportType::Car || $this->type === TransportType::Bike ) {
+          return "¡wuup wuup! Vruuuuuuuuuuuuummm!!...";
+       }
+
+       return "clac...";
+    }
 }
