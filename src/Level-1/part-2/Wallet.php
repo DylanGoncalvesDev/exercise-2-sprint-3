@@ -11,4 +11,8 @@ class Wallet {
     $this->idCard = $idCard;
     $this->transitCard = $transitCard;
   }
+
+  public function ringTheWallet(): string {
+    return "Caching!!...";
+  }
 }  
