@@ -14,15 +14,15 @@ class Person {
 
     public function leaveHouse() {
       echo "Out of Home!..." . PHP_EOL;
-      echo "I have my Keys ?..." . PHP_EOL . $this->keys->ringTheKeys() . PHP_EOL;
-      echo "The Wallet ?..." . PHP_EOL . $this->wallet->ringTheWallet() . PHP_EOL;
-      echo "The Phone ?..." . PHP_EOL . $this->smartphone->ringThePhone() . PHP_EOL;
+      echo "I have my Keys ?..." . PHP_EOL . $this->keys->makeSound() . PHP_EOL;
+      echo "The Wallet ?..." . PHP_EOL . $this->wallet->makeSound() . PHP_EOL;
+      echo "The Phone ?..." . PHP_EOL . $this->smartphone->makeSound() . PHP_EOL;
       if ($this->transport->getType() === TransportType::Car) {
-          echo "The Car keys ?..." . PHP_EOL . $this->transport->sound() . PHP_EOL;
+          echo "The Car keys ?..." . PHP_EOL . $this->transport->makeSound() . PHP_EOL;
       } elseif ($this->transport->getType() === TransportType::Bike) {
-                echo "The Bike keys ?..." . PHP_EOL . $this->transport->sound() . PHP_EOL;
+                echo "The Bike keys ?..." . PHP_EOL . $this->transport->makeSound() . PHP_EOL;
       } else {
-        echo "The Transit card ?..." . PHP_EOL . $this->transport->sound() . PHP_EOL;
+        echo "The Transit card ?..." . PHP_EOL . $this->transport->makeSound() . PHP_EOL;
       }
     }
     

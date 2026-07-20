@@ -1,12 +1,12 @@
 <?php
-class Smartphone {
+class Smartphone  implements Sound {
    private string $brand;
 
    public function __construct(string $brand) {
      $this->brand = $brand;
    }
 
-   public function ringThePhone(): string {
+   public function makeSound(): string {
      return "¡tururu tururu!...";
    }
 }

@@ -1,4 +1,5 @@
 <?php
+require_once "Sound.php";
 require_once "Wallet.php";
 require_once "Keys.php";
 require_once "Smartphone.php";

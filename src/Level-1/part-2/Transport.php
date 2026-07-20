@@ -5,7 +5,7 @@ enum TransportType {
    case PublicTransport;
 }
 
-class Transport {
+class Transport implements Sound {
     private TransportType $type;
 
     Public function __construct(TransportType $type) {
@@ -16,7 +16,7 @@ class Transport {
        return $this->type;
     }
 
-    public function sound(): string {
+    public function makeSound(): string {
        
        if($this->type === TransportType::Car || $this->type === TransportType::Bike ) {
           return "¡wuup wuup! Vruuuuuuuuuuuuummm!!...";

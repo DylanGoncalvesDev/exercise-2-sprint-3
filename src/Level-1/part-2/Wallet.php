@@ -1,5 +1,5 @@
 <?php
-class Wallet {
+class Wallet implements Sound {
   private string $bankCards;
   private string $cash;
   private string $idCard;
@@ -12,7 +12,7 @@ class Wallet {
     $this->transitCard = $transitCard;
   }
 
-  public function ringTheWallet(): string {
+  public function makeSound(): string {
     return "Caching!!...";
   }
 }  
